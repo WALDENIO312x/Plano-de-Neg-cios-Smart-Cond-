@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Negócio - Mini-Mercado Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#004AAD]">Plano de Negócios</h1>
+            <span class="font-semibold text-gray-700">Mini-Mercado Inteligente</span>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="sumario" class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 md:col-span-2 text-center">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4">Proposta para AGE-PE</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
+                    Apresentamos o plano de negócios para um Mini-Mercado Inteligente em condomínios, buscando um capital inicial de R$ 21.000. Este projeto visa a hiperconveniência, com alta lucratividade e retorno de investimento em 4 meses.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="stat-card">
+                        <h3 class="stat-title">Solicitação (AGE)</h3>
+                        <p class="stat-value">R$ 21.000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-title">Lucro Líquido / Mês</h3>
+                        <p class="stat-value">R$ 5.100</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-title">Payback Estimado</h3>
+                        <p class="stat-value">~4 Meses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <section id="empresa" class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">1. Descrição da Empresa</h2>
+                <p class="text-gray-700 mb-4">
+                    Nosso negócio é uma loja 100% automatizada (self-checkout) dentro de condomínios, oferecendo produtos essenciais 24/7 com preços justos. A missão é entregar conveniência e agilidade, eliminando filas e deslocamentos.
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Jornada do Cliente</h3>
+                <div class="flex flex-wrap items-center justify-center gap-2 md:gap-4 p-4 bg-gray-50 rounded-lg">
+                    <div class="text-center">
+                        <span class="text-4xl">🏠</span>
+                        <p class="text-sm font-medium">1. Entra na Loja</p>
+                    </div>
+                    <span class="text-2xl font-bold text-[#007BFF] hidden md:block">→</span>
+                    <div class="text-center">
+                        <span class="text-4xl">🛒</span>
+                        <p class="text-sm font-medium">2. Escolhe Produtos</p>
+                    </div>
+                    <span class="text-2xl font-bold text-[#007BFF] hidden md:block">→</span>
+                    <div class="text-center">
+                        <span class="text-4xl">📱</span>
+                        <p class="text-sm font-medium">3. Escaneia no Totem</p>
+                    </div>
+                    <span class="text-2xl font-bold text-[#007BFF] hidden md:block">→</span>
+                    <div class="text-center">
+                        <span class="text-4xl">💳</span>
+                        <p class="text-sm font-medium">4. Paga (Pix/Cartão)</p>
+                    </div>
+                    <span class="text-2xl font-bold text-[#007BFF] hidden md:block">→</span>
+                    <div class="text-center">
+                        <span class="text-4xl">🛍️</span>
+                        <p class="text-sm font-medium">5. Leva na Hora</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="marketing" class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">2. Plano de Marketing</h2>
+                <p class="text-gray-700 mb-4">
+                    O foco são moradores de condomínios (Classes B/C) na RMR. Nosso diferencial competitivo é a combinação de conveniência, segurança e preço justo.
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Análise Competitiva</h3>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </section>
+
+            <section id="swot" class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+                <h3 class="text-2xl font-bold text-[#004AAD] mb-6 text-center">Análise SWOT</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 text-lg mb-2">Forças (Strengths)</h4>
+                        <ul class="list-disc list-inside text-sm text-green-700 space-y-1">
+                            <li>Conveniência 24/7</li>
+                            <li>Preço competitivo</li>
+                            <li>Segurança (dentro do condomínio)</li>
+                            <li>Baixo custo operacional</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-lg">
+                        <h4 class="font-bold text-red-800 text-lg mb-2">Fraquezas (Weaknesses)</h4>
+                        <ul class="list-disc list-inside text-sm text-red-700 space-y-1">
+                            <li>Mix de produtos limitado</li>
+                            <li>Dependência de tecnologia</li>
+                            <li>Necessidade de capital inicial</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 text-lg mb-2">Oportunidades</h4>
+                        <ul class="list-disc list-inside text-sm text-blue-700 space-y-1">
+                            <li>Expansão do mercado vertical (condos)</li>
+                            <li>Parceria com Ivan Damha</li>
+                            <li>Baixa concorrência direta</li>
+                            <li>Cultura de autoatendimento</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <h4 class="font-bold text-yellow-800 text-lg mb-2">Ameaças (Threats)</h4>
+                        <ul class="list-disc list-inside text-sm text-yellow-700 space-y-1">
+                            <li>Apps de delivery (entrega rápida)</li>
+                            <li>Vandalismo ou furto (baixo risco)</li>
+                            <li>Aumento custo de fornecedores</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="operacional" class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">3. Plano Operacional</h2>
+                <p class="text-gray-700 mb-4">
+                    A operação será enxuta, utilizando um espaço de 10-20m². O empreendedor (MEI) fará a gestão e reposição (2-3x/semana), com suporte de sistema e mentoria especializada.
+                </p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Estrutura de Suporte</h3>
+                <div class="space-y-3">
+                    <div class="bg-[#004AAD] text-white p-4 rounded-lg text-center shadow-lg">
+                        <h4 class="font-bold text-lg">Empreendedor (MEI)</h4>
+                        <p class="text-sm">Gestão, Reposição e Financeiro</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-[#007BFF] text-white p-4 rounded-lg text-center shadow">
+                            <h4 class="font-semibold">Mentoria</h4>
+                            <p class="text-sm">(Ivan Damha)</p>
+                        </div>
+                        <div class="bg-[#56A8FF] text-white p-4 rounded-lg text-center shadow">
+                            <h4 class="font-semibold">Sistema</h4>
+                            <p class="text-sm">(Parceiro Tech)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="financeiro-investimento" class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">4. Plano Financeiro</h2>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Alocação do Investimento (R$ 21.000)</h3>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </section>
+
+            <section id="financeiro-projecao" class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">5. Projeções</h2>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Projeção Mensal (1ª Loja)</h3>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </section>
+
+            <section id="financeiro-crescimento" class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Projeção Crescimento Lucro Líquido (12 Meses)</h3>
+                <div class="chart-container-wide">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="text-center p-6 mt-8 bg-gray-200">
+        <p class="text-sm text-gray-600">Plano de Negócios - Mini-Mercado Inteligente | Outubro 2025</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
