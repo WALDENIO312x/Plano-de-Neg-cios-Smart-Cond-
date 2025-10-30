@@ -1,0 +1,54 @@
+/* Estilos globais e da fonte */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Container de Gráficos Padrão */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    max-height: 400px;
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 350px;
+    }
+}
+
+/* Container de Gráficos Amplo */
+.chart-container-wide {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    max-height: 450px;
+}
+
+/* Cartão de Estatísticas (Sumário) */
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-title {
+    font-size: 0.875rem;
+    color: #4A5568;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 2.25rem;
+    color: #004AAD;
+    font-weight: 700;
+}
